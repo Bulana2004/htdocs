@@ -88,15 +88,7 @@
     <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="assets/js/jquery.min.js"></script>
     <script>
-        function find(){
-            var vals = $("input").map(function(){return $(this).val()}).get()
-            $.ajax({
-                type : 'post',
-                data : {pvals:vals},
-                url : 'stsave.php',
-                success : function (json) {$("#stdata").html(json)}
-            })
-        }
+        
     </script>
 
 </html>
