@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Php project 1 !</title>
+    <title>Test inputs!</title>
+    <!--Bootstrap link-->
     <link rel="stylesheet" href="assets/dist/css/bootstrap.min.css">
 </head>
 
@@ -48,15 +49,9 @@
                         id="stdob">
                 </div>
             </div>
-
+            <!--St data-->
             <div class="text-center mt-3" id="stdata"></div>
 
-            <div class="row mt-4">
-                <div class="col-sm-4"></div>
-                <div class="col-sm-4">
-                    <input type="submit" class="form-control text-bg-primary" value="Submit" name="stsave">
-                </div>
-            </div>
             <div class="row mt-4">
                 <div class="col-sm-4"></div>
                 <div class="col-sm-4">
@@ -67,19 +62,20 @@
     </div>
 
 </body>
-
-    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
-    <script>
-        function find(){
-            var vals = $("input").map(function(){return $(this).val()}).get()
-            $.ajax({
-                type : 'post',
-                data : {pvals:vals},
-                url : 'stsave.php',
-                success : function (json) {$("#stdata").html(json)}
-            })
-        }
-    </script>
+<!--Bootstrap js file and jquery file-->
+<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<!--Java part-->
+<script>
+    function find() {
+        var val = $("input").map(function () { return $(this).val() }).get()
+        $.ajax({
+            type: 'post',
+            data: { input: val },
+            url: 'input.php',
+            success: function (json) { $("#stdata").html(json) }
+        })
+    }
+</script>
 
 </html>
