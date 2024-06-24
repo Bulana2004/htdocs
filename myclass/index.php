@@ -49,6 +49,13 @@
                 </div>
             </div>
 
+            <div class="row mt-4">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control border-dark" id="stindex">
+                </div>
+            </div>
+
             <div class="text-center mt-3" id="stdata"></div>
 
             <div class="row mt-4">
@@ -88,6 +95,25 @@
             </tbody>
         </table>
     </div>
+
+    <?php
+    $str1 = "SELECT * FROM classes";
+    $rs1 = $bdd -> query ($str1) or die ("error on $str1");
+    $rs2 = $bdd -> query ($str1) or die ("error on $str1");
+    ?>
+
+    <select name="" id="clname" onchange="alert(this.value)">
+    <?php while ($row1 = $rs1 -> fetch()){?>
+    <option value="<?php echo $row1[0] ?>"><?php echo $row1[1] ?></option>
+    <?php } ?>
+    </select>
+
+    <input type="text" id="clname" list="cllist" class="mb-5">
+    <datalist id="cllist">
+    <?php while ($row2 = $rs2 -> fetch()){?>
+    <option value="<?php echo $row2[1] ?>"><?php echo $row2[1] ?></option>
+    <?php } ?>   
+    </datalist>
 
 </body>
 
