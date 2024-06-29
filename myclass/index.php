@@ -115,6 +115,40 @@
     <?php } ?>   
     </datalist>
 
+    <div class="container">
+    <?php 
+        include "dtbase.php";
+        $str1 = "select * from bill";
+        $rs1= $bdd->query($str1) or die("error on $str1"); 
+        ?>
+        <h1 class="text-center">bill information</h1>
+        <table class="mt-5 table table-striped table-bordered">
+            <thead class="text-center">
+                <tr>
+                    <th>bNo</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php while ($row1 = $rs1 -> fetch()) {?>
+                <tr>
+                    <td><?php echo $row1[0]?></td>
+                    <td><?php echo $row1[1]?></td>
+                    <td><?php echo $row1[2]?></td>
+                </tr>
+                <?php } ?>
+            </tbody>
+        </table>
+
+        <div class="row mt-4 mb-5">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <input type="button" class="form-control text-bg-primary" value="Comfirm" id="comfirm">
+                </div>
+            </div>
+    </div>
+
 </body>
 
 <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
