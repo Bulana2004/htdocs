@@ -18,9 +18,9 @@
   <aside class="sidebar">
     <div class="sidebar-header">
       <img src="images/menu_24dp_FILL0_wght400_GRAD0_opsz24.png" alt="Menu">
-      <a href="index.html" style="text-decoration: none;">
+      <a href="index.php" style="text-decoration: none;">
         <h4 class="ms-4 mt-2 text-light">Home</h4>
-    </a>
+      </a>
     </div>
     <ul class="sidebar-links list-unstyled mt-4 flex-grow-1">
 
@@ -29,14 +29,14 @@
         <div class="menu-separator"></div>
       </h4>
       <li class="my-2">
-        <a href="members.html">
+        <a href="members.php">
           <span class="material-symbols-outlined"> groups </span>Members</a>
       </li>
       <li class="my-2">
-        <a href="users.html"><span class="material-symbols-outlined"> person_search </span>Users</a>
+        <a href="users.php"><span class="material-symbols-outlined"> person_search </span>Users</a>
       </li>
       <li class="my-2">
-        <a href="books.html"><span class="material-symbols-outlined"> library_books </span>Books</a>
+        <a href="books.php"><span class="material-symbols-outlined"> library_books </span>Books</a>
       </li>
 
       <h4 class="d-flex align-items-center justify-content-between">
@@ -67,6 +67,19 @@
 
 
   <!-- Content -->
+  <div class="content">
+    <h1>Welcome!</h1>
+    <h1>To Library project</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique debitis quibusdam enim, illum quo
+      sapiente
+      repudiandae velit dolore asperiores commodi magni excepturi eius impedit dolorum, perspiciatis magnam
+      consequuntur esse. Fuga!</p>
+    <br>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, perspiciatis architecto! Quas architecto
+      tempora mollitia quisquam nobis est quos, unde blanditiis exercitationem nihil, molestiae alias sed pariatur
+      earum. Molestias, nulla?</p>
+  </div>
   <!-- Content end -->
 
 

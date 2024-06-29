@@ -18,7 +18,7 @@
     <aside class="sidebar">
         <div class="sidebar-header">
             <img src="images/menu_24dp_FILL0_wght400_GRAD0_opsz24.png" alt="Menu">
-            <a href="index.html" style="text-decoration: none;">
+            <a href="index.php" style="text-decoration: none;">
                 <h4 class="ms-4 mt-2 text-light">Home</h4>
             </a>
         </div>
@@ -29,14 +29,15 @@
                 <div class="menu-separator"></div>
             </h4>
             <li class="my-2">
-                <a href="members.html" class="active">
+                <a href="members.php">
                     <span class="material-symbols-outlined"> groups </span>Members</a>
             </li>
             <li class="my-2">
-                <a href="users.html" class=""><span class="material-symbols-outlined"> person_search </span>Users</a>
+                <a href="users.php"><span class="material-symbols-outlined"> person_search </span>Users</a>
             </li>
             <li class="my-2">
-                <a href="books.html"><span class="material-symbols-outlined"> library_books </span>Books</a>
+                <a href="books.php" class="active"><span class="material-symbols-outlined"> library_books
+                    </span>Books</a>
             </li>
 
             <h4 class="d-flex align-items-center justify-content-between">

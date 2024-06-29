@@ -52,7 +52,7 @@
             <div class="row mt-4">
                 <div class="col-sm-4"></div>
                 <div class="col-sm-4">
-                    <input type="text" class="form-control border-dark" id="stindex">
+                    <input type="hidden" class="form-control border-dark" id="stindex" name="stindex">
                 </div>
             </div>
 
@@ -89,7 +89,11 @@
                     <td><?php echo $row1[2]?></td>
                     <td><?php echo $row1[3]?></td>
                     <td><?php echo $row1[4]?></td>
-                    <td><input type="button" value="Edit" class="form-control text-bg-dark" id="<?php echo $row1["stindex"]?>" onclick="findst(this.id)"></td>
+                    <td><div class="row">
+                            <div class="col-6"><input type="button" value="Edit" class="form-control text-bg-dark" id="<?php echo $row1["stindex"]?>" onclick="findst(this.id)"></div>
+                            <div class="col-6"><input type="button" value="Delete" class="form-control text-bg-dark" id="<?php echo $row1["stindex"]?>" onclick="deletest(this.id)"></div>
+                        </div>
+                    </td>
                 </tr>
                 <?php } ?>
             </tbody>
@@ -172,6 +176,19 @@
             success : function (json) { $("#stdata").html(json)}
         })
     }
+
+    function deletest(stindex) {
+        $.ajax({
+            type: 'post',
+            data: { stindex: stindex },
+            url: 'deletest.php',
+            success: function (json) {
+                $("#stdata").html(json);
+                location.reload(); // Reload the page to reflect changes
+            }
+        });
+    }
+
 </script>
 
 </html>

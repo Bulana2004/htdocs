@@ -11,6 +11,7 @@
 body {
   min-height: 100vh;
   background: #f0f4ff;
+  display: flex;
 }
 
 .sidebar {
@@ -150,4 +151,16 @@ body {
 .sidebar:hover .user-account {
   background: #fff;
   border-radius: 4px;
+}
+
+.content {
+  margin-left: 85px;
+  padding: 20px;
+  transition: margin-left 0.4s ease;
+  width: calc(100% - 85px);
+}
+
+.sidebar:hover~.content {
+  margin-left: 260px;
+  width: calc(100% - 260px);
 }
