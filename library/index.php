@@ -67,7 +67,7 @@
 
 
   <!-- Content -->
-  <div class="content">
+  <div class="content text-dark">
     <h1>Welcome!</h1>
     <h1>To Library project</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique debitis quibusdam enim, illum quo
