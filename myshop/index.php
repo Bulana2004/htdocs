@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Shop project</title>
     <!-- Bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets\dist\css\bootstrap.min.css">
 </head>
-<body>
+<body class="text-bg-dark">
     <div class="container my-5">
         <h1>Welcome!</h1>
         <a href="addclient.php" class="btn btn-primary">Add Client</a>
@@ -50,6 +50,8 @@
             </tbody>
         </table>
     </div>
+
+    
 </body>
 <!-- Bootstrap JS and dependencies (Optional, but recommended) -->
 <script src="assets\dist\js\bootstrap.bundle.min.js"></script>
