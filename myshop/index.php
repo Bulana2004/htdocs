@@ -17,6 +17,7 @@
         <table class="table table-bordered table-striped table-hover">
             <thead class="thead-dark text-center">
                 <tr>
+                    <th></th>
                     <th>ID</th>
                     <th>NAME</th>
                     <th>EMAIL</th>
@@ -35,6 +36,7 @@
             <tbody>
                  <?php while ($row = $rs1 -> fetch()) {?>
                 <tr>
+                    <td><input type="checkbox" id="<?php echo $row[0] ?>"></td>
                     <td><?php echo $row["id"]?></td>
                     <td><?php echo $row["name"]?></td>
                     <td><?php echo $row["email"]?></td>
@@ -51,8 +53,10 @@
                 <?php }?>
             </tbody>
         </table>
+        <input type="button" value="Comfirm" class="btn btn-primary" onclick="comfirmdata()">
     </div>
 
+    <div class="container mt-5" id="data">............</div>
     
 </body>
 <!-- Bootstrap JS and dependencies (Optional, but recommended) -->
@@ -75,6 +79,24 @@
 
     function editClient(id){
         window.location.href = "addclient.php?id=" + id;
+    }
+
+    function comfirmdata(){
+        var val = $("input").map(function(){
+            if(this.checked){
+                return this.id
+            }
+        }).get()
+
+        $.ajax({
+            type: 'post',
+            data: {comfirm : val},
+            url: "php/comfirm.php",
+            success: function(response){
+                /* $("#data").html(response); */
+                location.reload();
+            }
+        })
     }
 </script>
 </html>

@@ -18,7 +18,7 @@ if ($id) {
 
     /* Insert the data to database */
     $id = $row["id"] + 1;
-    $str1 = "INSERT INTO clients VALUES ('$id','$vals[0]','$vals[1]','$vals[2]','$vals[3]','$vals[4]')";
+    $str1 = "INSERT INTO clients VALUES ('$id','$vals[0]','$vals[1]','$vals[2]','$vals[3]','$vals[4]','')";
     $rs1 = $bdd -> query ($str1) or die("error on $str1");
     echo "Insert Successfully!";
 }
