@@ -56,7 +56,7 @@
         <input type="button" value="Comfirm" class="btn btn-primary" onclick="comfirmdata()">
     </div>
 
-    <div class="container mt-5" id="data">............</div>
+    <!-- <div class="container mt-5" id="data">............</div> -->
     
 </body>
 <!-- Bootstrap JS and dependencies (Optional, but recommended) -->
