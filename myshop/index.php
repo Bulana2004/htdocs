@@ -22,6 +22,7 @@
                     <th>EMAIL</th>
                     <th>PHONE</th>
                     <th>ADDRESS</th>
+                    <th>GENDER</th>
                     <th>ACTIONS</th>
                 </tr>
             </thead>
@@ -39,6 +40,7 @@
                     <td><?php echo $row["email"]?></td>
                     <td><?php echo $row["phone"]?></td>
                     <td><?php echo $row["address"]?></td>
+                    <td><?php echo $row["gender"]?></td>
                     <td class="text-center">
                         <div class="btn-group" role="group">
                             <input type="button" value="Edit" class="btn btn-primary" id="<?php echo $row[0]?>" onclick="editClient(this.id)">

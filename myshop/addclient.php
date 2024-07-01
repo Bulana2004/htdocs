@@ -4,6 +4,7 @@ $name = '';
 $email = '';
 $phone = '';
 $address = '';
+$gender = '';
 
 if ($id) {
     include "php/dbconnection.php";
@@ -16,6 +17,7 @@ if ($id) {
     $email = $client['email'];
     $phone = $client['phone'];
     $address = $client['address'];
+    $gender = $client['gender'];  // Make sure your database has a 'gender' column
 }
 ?>
 
@@ -50,6 +52,14 @@ if ($id) {
                         <label for="address">Address</label>
                         <input type="text" class="form-control" id="address" value="<?php echo $address; ?>">
                     </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select class="form-control" id="gender">
+                            <option value="" disabled <?php echo $gender == '' ? 'selected' : ''; ?>>Select Gender</option>
+                            <option value="male" <?php echo $gender == 'male' ? 'selected' : ''; ?>>Male</option>
+                            <option value="female" <?php echo $gender == 'female' ? 'selected' : ''; ?>>Female</option>
+                        </select>
+                    </div>
                     <input type="button" class="form-control text-light bg-primary mt-3" value="<?php echo $id ? 'Update' : 'Add'; ?> Client" id="add_client" onclick="saveClient(<?php echo $id; ?>)">
                 </form>
                 <br>
@@ -67,7 +77,7 @@ if ($id) {
 
 <script type="text/javascript">
     function saveClient(id) {
-        var vals = $("input").map(function () { return $(this).val(); }).get();
+        var vals = $("input, select").map(function () { return $(this).val(); }).get();
         $.ajax({
             type: 'post',
             data: { pvals: vals, id: id },
